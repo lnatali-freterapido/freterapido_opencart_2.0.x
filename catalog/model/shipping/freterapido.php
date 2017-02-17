@@ -175,7 +175,6 @@ class WC_Freterapido_Shipping {
     }
 }
 
-
 class ModelShippingFreteRapido extends Model
 {
     private $sender;
