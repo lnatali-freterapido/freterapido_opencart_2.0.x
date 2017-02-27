@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <modification
-  xmlns="https://github.com/vqmod/vqmod"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="https://github.com/vqmod/vqmod https://raw.githubusercontent.com/vqmod/vqmod/master/vqmod.xsd">
+        xmlns="https://github.com/vqmod/vqmod"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://github.com/vqmod/vqmod https://raw.githubusercontent.com/vqmod/vqmod/master/vqmod.xsd">
     <id>Frete Rápido</id>
     <version>1.0.0</version>
     <vqmver required="true">2.6.1</vqmver>
@@ -181,6 +181,37 @@
             ]]></search>
             <add position="after"><![CDATA[
               'manufacturing_deadline' => $query->row['manufacturing_deadline'],
+            ]]></add>
+        </operation>
+    </file>
+    <file path="admin/view/template/sale/order_info.tpl">
+        <operation>
+            <search trim="true"><![CDATA[
+              <td><?php echo $shipping_method; ?></td>
+            ]]></search>
+            <add position="after" offset="2"><![CDATA[
+              <?php if ($fr_quote) { ?>
+              <tr>
+                <td><?php echo $text_shipping_code; ?></td>
+                <td><a target="_blank" href="//freterapido.com/?id=<?php echo substr($fr_quote[0], 1); ?>#/rastreamento-carga"><?php echo $fr_quote[0]; ?></a></td>
+              </tr>
+              <?php } ?>
+            ]]></add>
+        </operation>
+    </file>
+    <file path="admin/controller/sale/order.php">
+        <operation>
+            <search trim="true"><![CDATA[
+            $totals = $this->model_sale_order->getOrderTotals($this->request->get['order_id']);
+            ]]></search>
+            <add position="before"><![CDATA[
+            $this->load->language('shipping/freterapido');
+
+            $data['text_shipping_code'] = $this->language->get('text_shipping_code');
+
+            $this->load->model('sale/order_meta');
+
+            $data['fr_quote'] = $this->model_sale_order_meta->getMeta($order_id, 'freterapido_shippings');
             ]]></add>
         </operation>
     </file>
