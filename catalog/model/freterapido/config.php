@@ -1,3 +1,3 @@
 <?php
 
-define('FR_API_URL', 'http://api-externa.freterapido.app/');
+define('FR_API_URL', 'https://freterapido.com/api/external/');
