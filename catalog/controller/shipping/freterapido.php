@@ -32,6 +32,10 @@ class ControllerShippingFreterapido extends Controller {
 
         $custom_fields = $order['custom_field'];
 
+        if (!is_array($custom_fields)) {
+            return;
+        }
+
         $custom_field_key = array_reduce(array_keys($custom_fields), function ($carry, $key) {
             $custom_field = $this->model_account_custom_field->getCustomField($key);
 

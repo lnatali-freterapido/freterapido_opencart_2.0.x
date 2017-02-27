@@ -192,7 +192,11 @@
             <add position="after" offset="2"><![CDATA[
               <?php if ($fr_quote) { ?>
               <tr>
+                <?php if (version_compare(VERSION, '2.0.3.1', '>')): ?>
+                <td><button data-toggle="tooltip" title="<?php echo $text_shipping_code; ?>" class="btn btn-info btn-xs"><i class="fa fa-clock-o fa-fw"></i></button></td>
+                <?php else: ?>
                 <td><?php echo $text_shipping_code; ?></td>
+                <?php endif; ?>
                 <td><a target="_blank" href="//freterapido.com/?id=<?php echo substr($fr_quote[0], 1); ?>#/rastreamento-carga"><?php echo $fr_quote[0]; ?></a></td>
               </tr>
               <?php } ?>

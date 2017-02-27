@@ -3,13 +3,20 @@ class ControllerShippingFreteRapido extends Controller {
     private $error = array();
 
     public function install() {
-        $this->load->model('tool/event');
+        if (version_compare(VERSION, '2.0.0.0', '>')) {
+            $this->load->model('extension/event');
+            $event = $this->model_extension_event;
+        } else {
+            $this->load->model('tool/event');
+            $event = $this->model_tool_event;
+        }
+
         $this->load->model('localisation/language');
         $this->load->model('localisation/order_status');
         $this->load->language('shipping/freterapido');
 
-        $this->model_tool_event->addEvent('freterapido_add_order_history', 'post.order.history.add', 'shipping/freterapido/eventAddOrderHistory');
-        $this->model_tool_event->addEvent('freterapido_add_order', 'post.order.add', 'shipping/freterapido/storeShipping');
+        $event->addEvent('freterapido_add_order_history', 'post.order.history.add', 'shipping/freterapido/eventAddOrderHistory');
+        $event->addEvent('freterapido_add_order', 'post.order.add', 'shipping/freterapido/storeShipping');
 
         // Insere o status que será usado para a contratação
         $languages = $this->model_localisation_language->getLanguages();
@@ -341,12 +348,19 @@ class ControllerShippingFreteRapido extends Controller {
     }
 
     public function uninstall() {
-        $this->load->model('tool/event');
+        if (version_compare(VERSION, '2.0.0.0', '>')) {
+            $this->load->model('extension/event');
+            $event = $this->model_extension_event;
+        } else {
+            $this->load->model('tool/event');
+            $event = $this->model_tool_event;
+        }
+
         $this->load->model('localisation/order_status');
         $this->load->language('shipping/freterapido');
 
-        $this->model_tool_event->deleteEvent('freterapido_add_order_history');
-        $this->model_tool_event->deleteEvent('freterapido_add_order');
+        $event->deleteEvent('freterapido_add_order_history');
+        $event->deleteEvent('freterapido_add_order');
 
         // Exclui o status usado na contratação
         $statuses = $this->model_localisation_order_status->getOrderStatuses();
