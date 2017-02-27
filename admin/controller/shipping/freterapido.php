@@ -15,8 +15,13 @@ class ControllerShippingFreteRapido extends Controller {
         $this->load->model('localisation/order_status');
         $this->load->language('shipping/freterapido');
 
-        $event->addEvent('freterapido_add_order_history', 'post.order.history.add', 'shipping/freterapido/eventAddOrderHistory');
-        $event->addEvent('freterapido_add_order', 'post.order.add', 'shipping/freterapido/storeShipping');
+        if (version_compare(VERSION, '2.2.0.0', '>=')) {
+            $event->addEvent('freterapido_add_order_history', 'catalog/model/checkout/order/addOrderHistory/after', 'shipping/freterapido/eventAddOrderHistory');
+            $event->addEvent('freterapido_add_order', 'catalog/controller/checkout/confirm/after', 'shipping/freterapido/storeShipping');
+        } else {
+            $event->addEvent('freterapido_add_order_history', 'post.order.history.add', 'shipping/freterapido/eventAddOrderHistory');
+            $event->addEvent('freterapido_add_order', 'post.order.add', 'shipping/freterapido/storeShipping');
+        }
 
         // Insere o status que será usado para a contratação
         $languages = $this->model_localisation_language->getLanguages();

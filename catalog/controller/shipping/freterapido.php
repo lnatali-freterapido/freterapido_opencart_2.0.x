@@ -5,6 +5,10 @@ class ControllerShippingFreterapido extends Controller {
             include_once(DIR_APPLICATION . 'model/freterapido/' . $file_name . '.php');
         }
 
+        if (version_compare(VERSION, '2.2.0.0', '>=')) {
+            $order_id = func_get_arg(2);
+        }
+
         $this->load->model('account/order');
         $this->load->model('checkout/order');
         $this->load->model('checkout/order_meta');
@@ -79,6 +83,10 @@ class ControllerShippingFreterapido extends Controller {
 
     public function storeShipping($order_id) {
         $this->load->model('checkout/order_meta');
+
+        if (version_compare(VERSION, '2.2.0.0', '>=')) {
+            $order_id = $this->session->data['order_id'];
+        }
 
         $shipping_method = $this->session->data['shipping_method'];
 
