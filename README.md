@@ -178,5 +178,5 @@ Encontrou algum bug ou tem sugestões de melhorias no código? Sencacional! Não
 [2]: https://freterapido.com/painel/?origin=github_opencart "Painel do Frete Rápido"
 [3]: mailto:suporte@freterapido.com "E-mail para a galera super gente fina :)"
 [4]: https://github.com/freterapido/freterapido_opencart_2.0.x/archive/master.zip
-[5]: https://github.com/freterapido/freterapido_opencart_2.0.x/blob/master/LICENSE
+[5]: https://github.com/freterapido/freterapido_opencart_2.0.x/blob/master/LICENSE.txt
 [6]: https://github.com/freterapido/opencart_shipping_product_2.x
