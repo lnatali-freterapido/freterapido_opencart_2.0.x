@@ -105,11 +105,11 @@ Para total usabilidade do módulo **Frete Rápido**, é necessário realizar alg
 ![Configuração de categorias ](https://freterapido.com/dev/imgs/opencart_doc/2.3/categories.gif "Configuração de categorias")
 
 > **Obs:** Nem todas as categorias da sua loja podem estar na relação de categorias do Frete Rápido, mas é possível relacioná-las de forma ampla.
-> 
+>
 > **Exemplo 1**: Moda feminina --> Vestuário
-> 
+>
 > **Exemplo 2**: CDs --> CD / DVD / Blu-Ray
-> 
+>
 > **Exemplo 3**: Violões --> Instrumento Musical
 
 ####4. Campo personalizado de CPF
@@ -129,7 +129,7 @@ Para fazer isso, basta acessar Customers > Custom Filds > Botão Adicionar
 
 --------
 
-###Observações gerais: 
+###Observações gerais:
 1. Para obter cotações dos Correios é necessário configurar o seu contrato com os Correios no [Painel administrativo do Frete Rápido][2] > Empresa > Integração.
 2. Esse módulo atende cotações apenas para destinatários Pessoa Física.
 
@@ -178,5 +178,5 @@ Encontrou algum bug ou tem sugestões de melhorias no código? Sencacional! Não
 [2]: https://freterapido.com/painel/?origin=github_opencart "Painel do Frete Rápido"
 [3]: mailto:suporte@freterapido.com "E-mail para a galera super gente fina :)"
 [4]: https://github.com/freterapido/freterapido_opencart_2.0.x/archive/master.zip
-[5]: https://github.com/freterapido/freterapido_magento/blob/master/LICENSE
+[5]: https://github.com/freterapido/freterapido_opencart_2.0.x/blob/master/LICENSE
 [6]: https://github.com/freterapido/opencart_shipping_product_2.x
