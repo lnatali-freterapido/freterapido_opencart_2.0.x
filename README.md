@@ -2,9 +2,9 @@
 ![Frete Rápido - Sistema Inteligente de Gestão Logística](https://freterapido.com/imgs/frete_rapido.png)
 ===
 
-###**Módulo para plataforma OpenCart**
+### **Módulo para plataforma OpenCart**
 
-Versão do módulo: 1.0
+Versão do módulo: 1.0.1
 
 Compatibilidade com OpenCart: **2.0.x** a **2.2.x**
 
@@ -17,7 +17,7 @@ Links úteis:
 
 ----------
 
-###Requisito "vQmod"
+### Requisito "vQmod"
 
 >**ATENÇÃO!** Recomendamos que seja feito backup da sua loja antes de realizar qualquer instalação. A instalação desse módulo é de inteira responsabilidade do lojista.
 
@@ -31,7 +31,7 @@ Links úteis:
 
 ----------
 
-###Instalação
+### Instalação
 
 >**ATENÇÃO!** Recomendamos que seja feito backup da sua loja antes de realizar qualquer instalação. A instalação desse módulo é de inteira responsabilidade do lojista.
 
@@ -44,7 +44,7 @@ Links úteis:
 
 ---
 
-###Habilitando o Módulo
+### Habilitando o Módulo
 
 - Você precisa ir em **Extensions > Shipping**, procurar o plugin "**Frete Rápido**" na listagem "**Shipping**" e clicar no botão **Instalar** (+).
 
@@ -54,15 +54,15 @@ Links úteis:
 
 ----------
 
-###Configurações
+### Configurações
 
-####1. Configurações do módulo:
+#### 1. Configurações do módulo:
 
 - Agora, configure o módulo em **Extensions > Extensions > Extension List > Shipping**, procurar o plugin "**Frete Rápido**" na listagem "**Shipping**" e clicar no botão **Editar** (![Ícone de edição](https://freterapido.com/dev/imgs/opencart_doc/2.3/edit_icon.PNG)).
 
 ![Configurando o módulo do Frete Rápido](https://freterapido.com/dev/imgs/opencart_doc/2.3/extension_edit.PNG "Editando o módulo")
 
-![Configurando o módulo do Frete Rápido](https://freterapido.com/dev/imgs/opencart_doc/2.0/extension_configuration_2.png "Configurações do módulo")
+![Configurando o módulo do Frete Rápido](https://freterapido.com/dev/imgs/opencart_doc/2.0/extension_configurations.png "Configurações do módulo")
 
 - **Habilitar:** Habilita ou desabilita o módulo conforme sua necessidade.
 - **CNPJ da loja:** CNPJ da sua empresa conforme registrado no Frete Rápido.
@@ -74,7 +74,7 @@ Links úteis:
 
 > **Obs:** É importante informar todos os campos corretamente.
 
-####2. Medidas e Peso
+#### 2. Medidas e Peso
 
 Para total usabilidade do módulo **Frete Rápido**, é necessário realizar algumas configurações na sua loja.
 
@@ -95,21 +95,21 @@ Para total usabilidade do módulo **Frete Rápido**, é necessário realizar alg
 
 ![Configurando dados dos produtos](https://freterapido.com/dev/imgs/opencart_doc/2.3/product-configuration.jpg "Configuração dados de produtos")
 
-####3. Categorias
+#### 3. Categorias
 
 - É necessário relacionar cada categoria da sua loja com as categorias do Frete Rápido em: **Catalog > Categories > Edit** (por produto) **>** aba **"Data"**.
 
 ![Configuração de categorias ](https://freterapido.com/dev/imgs/opencart_doc/2.3/categories.gif "Configuração de categorias")
 
 > **Obs:** Nem todas as categorias da sua loja podem estar na relação de categorias do Frete Rápido, mas é possível relacioná-las de forma ampla.
->
+> 
 > **Exemplo 1**: Moda feminina --> Vestuário
->
+> 
 > **Exemplo 2**: CDs --> CD / DVD / Blu-Ray
->
+> 
 > **Exemplo 3**: Violões --> Instrumento Musical
 
-####4. Campo personalizado de CPF
+#### 4. Campo personalizado de CPF
 
 Para conseguir contratar o frete, você precisa criar um campo personalizado de CPF no cadastro de usuários.
 Para fazer isso, basta acessar Customers > Custom Filds > Botão Adicionar
@@ -126,7 +126,7 @@ Para fazer isso, basta acessar Customers > Custom Filds > Botão Adicionar
 
 --------
 
-###Observações gerais:
+### Observações gerais: 
 1. Para obter cotações dos Correios é necessário configurar o seu contrato com os Correios no [Painel administrativo do Frete Rápido][2] > Empresa > Integração.
 2. Esse módulo atende cotações apenas para destinatários Pessoa Física.
 
@@ -155,7 +155,7 @@ Para contratar um frente você precisa:
 
 --------
 
-###Contribuições
+### Contribuições
 Encontrou algum bug ou tem sugestões de melhorias no código? Sencacional! Não se acanhe, nos envie um pull request com a sua alteração e ajude este projeto a ficar ainda melhor.
 
 1. Faça um "Fork"
@@ -171,9 +171,9 @@ Encontrou algum bug ou tem sugestões de melhorias no código? Sencacional! Não
 
 
 
-[1]: https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=30147&filter_search=frete%20rapido&filter_category_id=4 "OpenCart Extension Store"
+[1]: https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=30147&filter_search=frete%20r%C3%A1pido "OpenCart Extension Store"
 [2]: https://freterapido.com/painel/?origin=github_opencart "Painel do Frete Rápido"
 [3]: mailto:suporte@freterapido.com "E-mail para a galera super gente fina :)"
 [4]: https://github.com/freterapido/freterapido_opencart_2.0.x/archive/master.zip
-[5]: https://github.com/freterapido/freterapido_opencart_2.0.x/blob/master/LICENSE.txt
+[5]: https://github.com/freterapido/freterapido_magento/blob/master/LICENSE
 [6]: https://github.com/freterapido/opencart_shipping_product_2.x
