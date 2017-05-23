@@ -27,7 +27,7 @@ Links úteis:
 - Agora, acesse o caminho de na sua loja conforme exemplo: http://dominiodasualoja.com.br/vqmod/install;
 - Ao concluir a instalação com sucesso, deverá ser apresentada a seguinte mensagem: _VQMOD HAS BEEN INSTALLED ON YOUR SYSTEM!_
 
-![Instalando o vQmod](https://freterapido.com/dev/imgs/opencart_doc/2.0/vqmod_install.gif "Instalação do plugin vQmod")
+![Instalando o vQmod](docs/img/vqmod_install.gif "Instalação do plugin vQmod")
 
 ----------
 
@@ -40,7 +40,7 @@ Links úteis:
 - Copie todo o conteúdo extraído para o diretório raiz da sua loja;
 - Agora, acesse a área administrativa de sua loja para concluir a instalação;
 
-![Instalação do módulo](https://freterapido.com/dev/imgs/opencart_doc/2.0/extension_install.gif "Procedimentos de instalação")
+![Instalação do módulo](docs/img/extension_install.gif "Procedimentos de instalação")
 
 ---
 
@@ -48,7 +48,7 @@ Links úteis:
 
 - Você precisa ir em **Extensions > Shipping**, procurar o plugin "**Frete Rápido**" na listagem "**Shipping**" e clicar no botão **Instalar** (+).
 
-![Habilitando o módulo](https://freterapido.com/dev/imgs/opencart_doc/2.0/extension_enabling.jpg "Habilitando o módulo")
+![Habilitando o módulo](docs/img/extension_enabling.jpg "Habilitando o módulo")
 
 ![Atenção! Faça backup da sua loja antes de realizar qualquer instalação.](https://freterapido.com/dev/imgs/magento_doc/attention_2.png "#FicaDica ;)")
 
@@ -62,7 +62,7 @@ Links úteis:
 
 ![Configurando o módulo do Frete Rápido](https://freterapido.com/dev/imgs/opencart_doc/2.3/extension_edit.PNG "Editando o módulo")
 
-![Configurando o módulo do Frete Rápido](https://freterapido.com/dev/imgs/opencart_doc/2.0/extension_configuration.png "Configurações do módulo")
+![Configurando o módulo do Frete Rápido](docs/img/extension_configuration.png "Configurações do módulo")
 
 - **Habilitar:** Habilita ou desabilita o módulo conforme sua necessidade.
 - **CNPJ da loja:** CNPJ da sua empresa conforme registrado no Frete Rápido.
@@ -140,7 +140,7 @@ Para fazer isso, basta acessar Customers > Custom Filds > Botão Adicionar
 Para cálculo do frete na página do produto, você precisa utilizar o plugin específico do Frete Rápido. Para instalá-lo, basta acessar sua documentação em [opencart_shipping_product_2.x][6].
 Após instalar o plugin, sua página do produto deverá apresentar o campo para calcular o frete com base no CEP.
 
-![Cálculo na página do produto](http://freterapido.com/dev/imgs/opencart_doc/2.0/cotacao_pagina_produto.gif "Página do produto")
+![Cálculo na página do produto](docs/img/cotacao_pagina_produto.gif "Página do produto")
 
 --------
 
@@ -154,7 +154,7 @@ Para contratar um frente você precisa:
 
 > **Obs**: Na aba **Shipping details** você encontra o código de rastreio do frete no campo **código do frete contratado no Frete Rápido**. Ao clicar sobre o código, você será direcionado à página de rastreio desse frete.
 
-![Cálculo na página do produto](http://freterapido.com/dev/imgs/opencart_doc/2.0/contratacao.gif "Página do produto")
+![Cálculo na página do produto](docs/img/contratacao.gif "Página do produto")
 
 --------
 
