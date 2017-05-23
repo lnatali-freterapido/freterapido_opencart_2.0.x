@@ -118,7 +118,7 @@ class ControllerShippingFreteRapido extends Controller {
               (42, 'Material Odontológico', 42),
               (43, 'Material Pet Shop / Rações', 43),
               (44, 'Material Veterinário', 44),
-              (45, 'Móveis / Utensílios', 45),
+              (45, 'Móveis montados', 45),
               (46, 'Moto Peças', 46),
               (47, 'Mudas / Plantas', 47),
               (48, 'Papelaria / Documentos', 48),
@@ -137,7 +137,17 @@ class ControllerShippingFreteRapido extends Controller {
               (61, 'Vidros / Frágil', 61),
               (62, 'Cargas refrigeradas/congeladas', 62),
               (63, 'Papelão', 63),
-              (64, 'Outros', 999);
+              (64, 'Móveis desmontados', 64),
+              (65, 'Sofá', 65),
+              (66, 'Colchão', 66),
+              (67, 'Travesseiro', 67),
+              (68, 'Móveis com peças de vidro', 68),
+              (69, 'Acessórios de Airsoft / Paintball', 69),
+              (70, 'Acessórios de Pesca', 70),
+              (71, 'Simulacro de Arma / Airsoft', 71),
+              (72, 'Arquearia', 72),
+              (73, 'Acessórios de Arquearia', 73),
+              (74, 'Outros', 999);
         ");
 
         $row = $this->db->query("SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA LIKE '" . DB_DATABASE . "' AND TABLE_NAME LIKE '" . DB_PREFIX . "product' AND COLUMN_NAME = 'manufacturing_deadline' ");
@@ -187,6 +197,8 @@ class ControllerShippingFreteRapido extends Controller {
         $data['entry_cnpj']= $this->language->get('entry_cnpj');
         $data['entry_results']= $this->language->get('entry_results');
         $data['entry_limit']= $this->language->get('entry_limit');
+        $data['entry_free_shipping']= $this->language->get('entry_free_shipping');
+        $data['entry_min_value_free_shipping']= $this->language->get('entry_min_value_free_shipping');
         $data['entry_dimension']= $this->language->get('entry_dimension');
         $data['entry_length']= $this->language->get('entry_length');
         $data['entry_width']= $this->language->get('entry_width');
@@ -263,6 +275,18 @@ class ControllerShippingFreteRapido extends Controller {
             $data['freterapido_limit'] = $this->request->post['freterapido_limit'];
         } else {
             $data['freterapido_limit'] = $this->config->get('freterapido_limit');
+        }
+
+        if (isset($this->request->post['freterapido_free_shipping'])) {
+            $data['freterapido_free_shipping'] = $this->request->post['freterapido_free_shipping'];
+        } else {
+            $data['freterapido_free_shipping'] = $this->config->get('freterapido_free_shipping');
+        }
+
+        if (isset($this->request->post['freterapido_min_value_free_shipping'])) {
+            $data['freterapido_min_value_free_shipping'] = $this->request->post['freterapido_min_value_free_shipping'];
+        } else {
+            $data['freterapido_min_value_free_shipping'] = $this->config->get('freterapido_min_value_free_shipping');
         }
 
         if (isset($this->request->post['freterapido_msg_prazo'])) {
