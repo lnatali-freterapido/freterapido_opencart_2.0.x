@@ -20,6 +20,13 @@ Links úteis:
 - [suporte@freterapido.com][3]
 
 
+-------------
+
+### IMPORTANTE
+A Frete Rápido não mantem e/ou oferece suporte para a integração com o **OpenCart**, apenas disponibilizamos um módulo de integração padrão que atente a maioria dos e-commerces que utilizam esta plataforma.
+
+Para qualquer modificação no módulo baseada no modelo de negócio do seu e-commerce, nós disponibilizamos aqui o código fonte do módulo integrado a [API do Frete Rápido][8] e aqui [neste link][7] você encontra a documentação de integrações e modificações do **OpenCart**.
+
 ----------
 
 ### Requisito "vQmod"
@@ -33,13 +40,6 @@ Links úteis:
 - Ao concluir a instalação com sucesso, deverá ser apresentada a seguinte mensagem: _VQMOD HAS BEEN INSTALLED ON YOUR SYSTEM!_
 
 ![Instalando o vQmod](docs/img/vqmod_install.gif "Instalação do plugin vQmod")
-
--------------
-
-### IMPORTANTE
-A Frete Rápido não mantem e/ou oferece suporte para a integração com o **OpenCart**, apenas disponibilizamos um módulo de integração padrão que atente a maioria dos e-commerces que utilizam esta plataforma.
-
-Para qualquer modificação no módulo baseada no modelo de negócio do seu e-commerce, nós disponibilizamos aqui o código fonte do módulo integrado a [API do Frete Rápido][8] e aqui [neste link][7] você encontra a documentação de integrações e modificações do **OpenCart**.
 
 --------------
 
