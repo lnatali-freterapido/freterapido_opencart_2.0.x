@@ -36,7 +36,7 @@ A Frete Rápido não se responsabiliza por eventualidades advindas deste módulo
 
 >**ATENÇÃO!** Recomendamos que seja feito backup da sua loja antes de realizar qualquer instalação. A instalação desse módulo é de inteira responsabilidade do lojista.
 
-- Para a instalação do módulo **Frete Rápido** na sua loja é necessário ter previamente instalado o plugin **vQmod** que pode ser [baixado nesse link][6] (versão mínima 2.6.1);
+- Para a instalação do módulo **Frete Rápido** na sua loja é necessário ter previamente instalado o plugin **vQmod** que pode ser [baixado nesse link][9] (versão mínima 2.6.1);
 - Descompacte/Extraia o arquivo "zip" que baixou;
 - Copie o diretório "**vqmod**" criado em "**vqmod-x.x.x** > **upload**" para o diretório raiz da sua loja;
 - Agora, acesse o caminho de na sua loja conforme exemplo: http://dominiodasualoja.com.br/vqmod/install;
@@ -86,10 +86,10 @@ A Frete Rápido não se responsabiliza por eventualidades advindas deste módulo
 - **Exibir Frete Grátis no frete mais barato:** Apresenta para o cliente da loja o frete mais barato como **Frete Grátis**.
 - **Valor Mínimo Frete Grátis:**  Define o valor mínimo para ativar a regra de **Frete grátis**. Para valor **indefinido**, informe **0**.
 - **Dimensões padrões (C x L x A):** Permite informar dimensões padrões de encomendas, geralmente usado quando se tem um único tipo de encomenda.
-- **Token de integração:** Token de integração da sua empresa disponível no [Painel administrativo do Frete Rápido][2] > Empresa > Integração.
+- **Token de integração:** Token de integração da sua empresa disponível no [Painel administrativo do Frete Rápido][2] > Configurações.
 - **Ordem:** Ordem do plugin na sua loja.
 
-> **Obs:** É importante informar todos os campos corretamente.
+> **Atenção:** É importante informar corretamente todos os campos para o perfeito funcionamento do módulo.
 
 #### 2. Medidas e Peso
 
@@ -97,26 +97,24 @@ Para total usabilidade do módulo **Frete Rápido**, é necessário realizar alg
 
 - É necessário informar alguns dados de cada produto em: **Catalog > Products > Edit** (por produto) **>** aba **"Data"**.
 
+    - **SKU:** Não é obrigatório, mas cajo esteja informado será possível aplicar regras de frete por SKUs, por exemplo.
+
+    - **Prazo de fabricação:** Permite informar um prazo de fabricação do produto, caso tenha. Este prazo será acrescido ao prazo de entrega.
+
+    - **Dimensões (C x L x A):** Informe as dimensões do produto (Comprimento, Largura e Altura).
+
+    - **Peso:** Informe o peso do produto, considerando embalado pronto para envio.
+
 ![Configurando dados dos produtos](https://freterapido.com/dev/imgs/opencart_doc/2.3/product_configuration.gif "Configuração dados de produtos")
 
->**1. SKU:** Sugerimos definir um SKU para cada produto da sua loja. Não é obrigatório, mas se o SKU estiver definido, será possível realizar uma análise junto ao Frete Rápido.
-
->**2. Prazo de fabricação:** Informe um prazo de fabricação do produto, caso tenha. Esse prazo adicional será acrescido ao prazo de entrega.
-
->**3. Dimensões (C x L x A):** Informe os valores de medidas do produto (Comprimento, Largura e Altura).
-
->**4. Peso:** Informe o peso do produto.
-
 > **Atenção:** Considerar as dimensões e peso do produto com a embalagem pronta para envio/postagem.
-> É obrigatório ter o peso configurado em cada produto para que seja possível cotar o frete de forma eficiente. As dimensões podem ficar em branco e neste caso, serão utilizadas as medidas padrões informadas na configuração do plugin, mas é recomendado que cada produto tenha suas configurações próprias de peso e dimensões.
+> É importante ter o peso configurado em cada produto para que seja possível cotar o frete de forma eficiente. Se as dimensões não forem informadas, serão utilizadas as medidas padrões informadas na configuração do plugin. Mas é recomendado que cada produto tenha suas próprias dimensões e peso informados.
 
 ![Configurando dados dos produtos](https://freterapido.com/dev/imgs/opencart_doc/2.3/product-configuration.jpg "Configuração dados de produtos")
 
 #### 3. Categorias
 
 - É necessário relacionar cada categoria da sua loja com as categorias do Frete Rápido em: **Catalog > Categories > Edit** (por produto) **>** aba **"Data"**.
-
-![Configuração de categorias ](https://freterapido.com/dev/imgs/opencart_doc/2.3/categories.gif "Configuração de categorias")
 
 > **Obs:** Nem todas as categorias da sua loja podem estar na relação de categorias do Frete Rápido, mas é possível relacioná-las de forma ampla.
 >
@@ -125,6 +123,9 @@ Para total usabilidade do módulo **Frete Rápido**, é necessário realizar alg
 > **Exemplo 2**: CDs --> CD / DVD / Blu-Ray
 >
 > **Exemplo 3**: Violões --> Instrumento Musical
+
+![Configuração de categorias ](https://freterapido.com/dev/imgs/opencart_doc/2.3/categories.gif "Configuração de categorias")
+
 
 #### 4. Campo personalizado de CPF
 
@@ -143,9 +144,17 @@ Para fazer isso, basta acessar Customers > Custom Filds > Botão Adicionar
 
 --------
 
-### Observações gerais:
-1. Para obter cotações dos Correios é necessário configurar o seu contrato com os Correios no [Painel administrativo do Frete Rápido][2] > Empresa > Integração.
-2. Esse módulo atende cotações apenas para destinatários Pessoa Física.
+### Contratação do frete
+
+Para contratar um frente e gerar uma solicitação de coleta, você deve seguir os passos:
+
+- Acessar Sales > Orders > [Uma ordem selecionada] > Aba **History**.
+- Selecionar a opção **À espera do envio** no campo **Order Status**.
+- Clicar no botão **Add History**.
+
+> **Obs**: Na aba **Shipping details** você encontra o código de rastreio do frete no campo **código do frete contratado no Frete Rápido**. Ao clicar sobre o código, você será direcionado à página de rastreio desse frete.
+
+![Cálculo na página do produto](docs/img/contratacao.gif "Página do produto")
 
 ----------
 
@@ -156,19 +165,6 @@ Após instalar o plugin, sua página do produto deverá apresentar o campo para 
 
 ![Cálculo na página do produto](docs/img/cotacao_pagina_produto.gif "Página do produto")
 
---------
-
-### Contratação do frete
-
-Para contratar um frente você precisa:
-
-- Acessar Sales > Orders > [Uma ordem selecionada] > Aba **History**.
-- Trocar o campo **Order Status** de **À espera do envio**.
-- Clicar no botão **Add History**.
-
-> **Obs**: Na aba **Shipping details** você encontra o código de rastreio do frete no campo **código do frete contratado no Frete Rápido**. Ao clicar sobre o código, você será direcionado à página de rastreio desse frete.
-
-![Cálculo na página do produto](docs/img/contratacao.gif "Página do produto")
 
 --------
 
@@ -202,3 +198,4 @@ Encontrou algum bug ou tem sugestões de melhorias no código? Sencacional! Não
 [6]: https://github.com/freterapido/opencart_shipping_product_2.x
 [7]: http://docs.opencart.com/developer/module/
 [8]: https://www.freterapido.com/dev/
+[9]: https://github.com/vqmod/vqmod
