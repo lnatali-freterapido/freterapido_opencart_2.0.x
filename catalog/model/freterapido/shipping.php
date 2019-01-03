@@ -16,9 +16,10 @@ class FreterapidoShipping {
 
     public function __construct(array $config) {
         $this->config = array_merge([
-            'tipo_cobranca' => 1,
-            'tipo_frete' => 1,
-            'ecommerce' => true,
+            'tipo_cobranca'     => 1,
+            'tipo_frete'        => 1,
+            'ecommerce'         => true,
+            'codigo_plataforma' => '58b9732e2'
         ], $config);
     }
 
