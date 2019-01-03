@@ -88,7 +88,7 @@ class FreterapidoShipping {
      */
     public function set_filter($filter) {
         if ($filter) {
-            $this->config['filtro'] = $filter;
+            $this->config['filtro'] = (int) $filter;
         }
 
         return $this;
@@ -100,7 +100,7 @@ class FreterapidoShipping {
      */
     public function set_limit($limit) {
         if ($limit) {
-            $this->config['limite'] = $limit;
+            $this->config['limite'] = (int) $limit;
         }
 
         return $this;
