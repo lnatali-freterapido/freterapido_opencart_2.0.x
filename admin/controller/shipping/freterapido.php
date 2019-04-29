@@ -76,7 +76,7 @@ class ControllerShippingFreteRapido extends Controller {
             (fr_category_id, name, code) VALUES
               (1, 'Abrasivos', 1),
               (2, 'Adubos / Fertilizantes', 2),
-              (3, 'Alimentos', 3),
+              (3, 'Alimentos perecíveis', 3),
               (4, 'Artigos para Pesca', 4),
               (5, 'Auto Peças', 5),
               (6, 'Bebidas / Destilados', 6),
@@ -86,7 +86,7 @@ class ControllerShippingFreteRapido extends Controller {
               (10, 'CD / DVD / Blu-Ray', 10),
               (11, 'Combustíveis / Óleos', 11),
               (12, 'Confecção', 12),
-              (13, 'Cosméticos / Perfumaria', 13),
+              (13, 'Cosméticos', 13),
               (14, 'Couro', 14),
               (15, 'Derivados Petróleo', 15),
               (16, 'Descartáveis', 16),
@@ -95,7 +95,7 @@ class ControllerShippingFreteRapido extends Controller {
               (19, 'Eletrodomésticos', 19),
               (20, 'Embalagens', 20),
               (21, 'Explosivos / Pirotécnicos', 21),
-              (22, 'Farmacêutico / Medicamentos', 22),
+              (22, 'Medicamentos', 22),
               (23, 'Ferragens', 23),
               (24, 'Ferramentas', 24),
               (25, 'Fibras Ópticas', 25),
@@ -116,7 +116,7 @@ class ControllerShippingFreteRapido extends Controller {
               (40, 'Material Gráfico', 40),
               (41, 'Material Hospitalar', 41),
               (42, 'Material Odontológico', 42),
-              (43, 'Material Pet Shop / Rações', 43),
+              (43, 'Material Pet Shop', 43),
               (44, 'Material Veterinário', 44),
               (45, 'Móveis montados', 45),
               (46, 'Moto Peças', 46),
@@ -147,7 +147,16 @@ class ControllerShippingFreteRapido extends Controller {
               (71, 'Simulacro de Arma / Airsoft', 71),
               (72, 'Arquearia', 72),
               (73, 'Acessórios de Arquearia', 73),
-              (74, 'Outros', 999);
+              (74, 'Alimentos não perecíveis', 74),
+              (75, 'Caixa de embalagem', 75),
+              (76, 'TV / Monitores', 76),
+              (77, 'Linha Branca', 77),
+              (78, 'Vitaminas / Suplementos nutricionais', 78),
+              (79, 'Malas / Mochilas', 79),
+              (80, 'Máquina / Equipamentos', 80),
+              (81, 'Rações / Alimento para Animal', 81),
+              (82, 'Artigos para Camping', 82),
+              (83, 'Outros', 999);
         ");
 
         $row = $this->db->query("SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA LIKE '" . DB_DATABASE . "' AND TABLE_NAME LIKE '" . DB_PREFIX . "product' AND COLUMN_NAME = 'manufacturing_deadline' ");
