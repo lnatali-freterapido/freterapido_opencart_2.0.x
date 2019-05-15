@@ -102,7 +102,7 @@ class ControllerShippingFreteRapido extends Controller {
               (26, 'Fonográfico', 26),
               (27, 'Fotográfico', 27),
               (28, 'Fraldas / Geriátricas', 28),
-              (29, 'Higiene / Limpeza', 29),
+              (29, 'Higiene', 29),
               (30, 'Impressos', 30),
               (31, 'Informática / Computadores', 31),
               (32, 'Instrumento Musical', 32),
@@ -126,7 +126,7 @@ class ControllerShippingFreteRapido extends Controller {
               (50, 'Material Plástico', 50),
               (51, 'Pneus e Borracharia', 51),
               (52, 'Produtos Cerâmicos', 52),
-              (53, 'Produtos Químicos', 53),
+              (53, 'Produto Químico Não Classificado', 53),
               (54, 'Produtos Veterinários', 54),
               (55, 'Revistas', 55),
               (56, 'Sementes', 56),
@@ -156,7 +156,13 @@ class ControllerShippingFreteRapido extends Controller {
               (80, 'Máquina / Equipamentos', 80),
               (81, 'Rações / Alimento para Animal', 81),
               (82, 'Artigos para Camping', 82),
-              (83, 'Outros', 999);
+              (83, 'Pilhas / Baterias', 83),
+              (84, 'Estiletes / Materiais cortantes', 84),
+              (85, 'Produto Químico Classificado', 85),
+              (86, 'Limpeza', 86),
+              (87, 'Extintores', 87),
+              (88, 'Equipamentos de segurança / EPI', 88),
+              (89, 'Outros', 999);
         ");
 
         $row = $this->db->query("SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA LIKE '" . DB_DATABASE . "' AND TABLE_NAME LIKE '" . DB_PREFIX . "product' AND COLUMN_NAME = 'manufacturing_deadline' ");
